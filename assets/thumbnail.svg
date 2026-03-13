@@ -1,0 +1,104 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0f172a"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Ambient glow behind icon -->
+  <ellipse cx="600" cy="260" rx="180" ry="160" fill="url(#glowGrad)"/>
+
+  <!-- Icon: Stylized anvil + flame -->
+  <!-- Anvil base -->
+  <rect x="530" y="310" width="140" height="28" rx="6" fill="#334155"/>
+  <rect x="548" y="295" width="104" height="20" rx="4" fill="#475569"/>
+
+  <!-- Anvil top -->
+  <rect x="520" y="268" width="160" height="32" rx="8" fill="#64748b"/>
+
+  <!-- Flame (upward arrow shape) -->
+  <!-- Outer flame -->
+  <path d="M600 100 C570 140 545 170 548 210 C550 235 565 252 580 262 C572 240 575 220 590 205 C588 228 595 245 600 258 C605 245 612 228 610 205 C625 220 628 240 620 262 C635 252 650 235 652 210 C655 170 630 140 600 100Z"
+        fill="url(#flameGrad)" filter="url(#glow)" opacity="0.9"/>
+
+  <!-- Inner flame highlight -->
+  <path d="M600 140 C585 165 578 185 580 208 C582 222 590 234 597 242 C594 226 596 212 604 202 C602 218 606 230 610 240 C617 230 620 215 618 200 C626 215 626 228 622 240 C632 228 636 212 634 195 C636 168 618 148 600 140Z"
+        fill="#fef3c7" opacity="0.6"/>
+
+  <!-- Spark particles -->
+  <circle cx="548" cy="180" r="4" fill="#fde68a" filter="url(#glow)" opacity="0.8"/>
+  <circle cx="655" cy="155" r="3" fill="#fde68a" filter="url(#glow)" opacity="0.7"/>
+  <circle cx="535" cy="215" r="2.5" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="668" cy="200" r="2" fill="#fde68a" opacity="0.5"/>
+  <circle cx="560" cy="145" r="2" fill="#fef3c7" opacity="0.5"/>
+
+  <!-- Title: SkillForge -->
+  <text x="600" y="400"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="88"
+        font-weight="700"
+        fill="#f8fafc"
+        text-anchor="middle"
+        letter-spacing="-2">SkillForge</text>
+
+  <!-- Accent underline -->
+  <rect x="430" y="416" width="340" height="3" rx="2" fill="#f59e0b" opacity="0.8"/>
+
+  <!-- Tagline -->
+  <text x="600" y="468"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="26"
+        font-weight="400"
+        fill="#94a3b8"
+        text-anchor="middle"
+        letter-spacing="0.5">Learn until you don't need this.</text>
+
+  <!-- Bottom feature pills -->
+  <!-- Pill 1 -->
+  <rect x="330" y="520" width="160" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="410" y="544"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16"
+        fill="#f59e0b"
+        text-anchor="middle"
+        font-weight="500">📚 Prompt Modules</text>
+
+  <!-- Pill 2 -->
+  <rect x="520" y="520" width="160" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="600" y="544"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16"
+        fill="#f59e0b"
+        text-anchor="middle"
+        font-weight="500">🤖 Agent Skill</text>
+
+  <!-- Pill 3 -->
+  <rect x="710" y="520" width="160" height="38" rx="19" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="790" y="544"
+        font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+        font-size="16"
+        fill="#f59e0b"
+        text-anchor="middle"
+        font-weight="500">🌍 Open Source</text>
+</svg>

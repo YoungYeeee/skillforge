@@ -1,5 +1,9 @@
 # SkillForge 🔨
 
+<p align="center">
+  <img src="./assets/thumbnail.svg" alt="SkillForge" width="100%"/>
+</p>
+
 **Not prompts to do things for you — learning paths to make you capable of doing them yourself.**
 
 > Using AI to level up human intelligence, one skill at a time.
